@@ -1,6 +1,15 @@
 <template>
   <div>
-    <nuxt/>
+    <section class="container">
+      <header>
+        <h1>Raultrysw | Pagina personal</h1>
+        <ul>
+          <li><nuxt-link to="/">Página principal</nuxt-link></li>
+          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+        </ul>
+      </header>
+    </section>
+    <main is="nuxt" />
   </div>
 </template>
 

@@ -21,11 +21,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: './',
     /*
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'vue-loader!vue-md-loader'
+      })
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
