@@ -13,7 +13,10 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "ed-grid": "^2.1.7",
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.0.0",
+    "sass-loader": "^6.0.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

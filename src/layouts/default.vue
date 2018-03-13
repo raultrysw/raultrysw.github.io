@@ -1,19 +1,60 @@
 <template>
-  <div>
+  <div class="app main-start flex-column">
     <section class="container">
-      <header>
-        <h1>Raultrysw | Pagina personal</h1>
-        <ul>
+      <header class="app__header main-justify cross-center">
+        <h1 class="app__title">Raultrysw | Pagina personal</h1>
+        <ul class="app__menu ed-menu l-horizontal site-menu">
           <li><nuxt-link to="/">Página principal</nuxt-link></li>
           <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+          <li><nuxt-link to="/projects">Proyectos</nuxt-link></li>
         </ul>
       </header>
     </section>
-    <main is="nuxt" />
+    <main class="app__main-section" is="nuxt" />
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import '../assets/ed-grid.min.css';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  &__header {
+    border-bottom: 1px solid;
+  }
+  &__section {
+    padding: 0em 1em;
+    &:not(:last-child) {
+      padding-bottom: .5em;
+      margin-bottom: 1em;
+      border-bottom: 1px solid;
+    }
+  }
+  &__main-section {
+    // margin: 0 auto;
+    // width: 80vw;
+    // border-width: 0px 1px;
+    // border-style: solid;
+  }
+}
+
+.no-list {
+  list-style-type: none;
+  &--horizontal {
+    display: flex;
+    justify-content: flex-start;
+    & > li {
+      padding: .5em;
+      margin: .25em;
+    }
+  }
+}
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -29,7 +70,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
+.site-menu {
+  width: auto !important;
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
